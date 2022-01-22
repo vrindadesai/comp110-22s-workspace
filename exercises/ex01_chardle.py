@@ -27,7 +27,10 @@ if (character == word[3]):
 if (character == word[4]):
     print(character + " found at index 4")
     counter += 1
+str_counter: str = str(counter)
 if (counter == 0):
     print("No instances of " + character + " found in " + word)
-str_counter: str = str(counter)
-print(str_counter + " instances found in " + word)
+if (counter == 1):
+    print(str_counter + " instance found in " + word)
+else:
+    print(str_counter + " instances found in " + word)
