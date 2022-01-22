@@ -31,6 +31,6 @@ str_counter: str = str(counter)
 if (counter == 0):
     print("No instances of " + character + " found in " + word)
 if (counter == 1):
-    print(str_counter + " instance found in " + word)
+    print(str_counter + " instance of " + character + " found in " + word)
 else:
-    print(str_counter + " instances found in " + word)
+    print(str_counter + " instances of " + character + " found in " + word)
