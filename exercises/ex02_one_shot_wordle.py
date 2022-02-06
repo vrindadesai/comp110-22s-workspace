@@ -20,19 +20,19 @@ while (i < len(secret_word)):  # secret word letter changes but not guess letter
     if guess[i] == secret_word[i]:
         results_boxes += GREEN_BOX
         found_flag = True
-        bb += "g"
+        #bb += "g"
     else:  # letter was NOT found at it's own index
         while (j < len(secret_word)):  # so we can look anywhere else but it will be yellow
             if guess[i] == secret_word[j]:
                 results_boxes += YELLOW_BOX
                 j = len(secret_word)  # terminate loop now
                 found_flag = True
-                bb += "y"
+                #bb += "y"
             else:
                 j += 1
         if (found_flag == False):
             results_boxes += WHITE_BOX
-            bb += "w"
+            #bb += "w"
         else:
             found_flag = False  # reset flag
     j = 0  # reset j
