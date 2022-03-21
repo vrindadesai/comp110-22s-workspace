@@ -1,8 +1,4 @@
-"""Dictionary related utility functions."""
-
-__author__ = "730406615"
-
-# Copied functions:
+"""Some helpful utility functions for working with CSV files."""
 
 from csv import DictReader
 
@@ -51,57 +47,3 @@ def columnar(row_table: list) -> dict:
         result[column] = column_values(row_table, column)
 
     return result
-
-# My functions:
-
-
-def head(coltable: dict, n: int) -> dict:
-    result: dict[str, list[str]] = {}
-
-    for key in coltable:
-        # for col in coltable
-        result[key] = []
-        i: int = 0
-        while i < n:
-            item: str = coltable[key][i]
-            result[key].append(item)
-            i += 1
-
-    return result
-
-
-def select(coltable: dict, querycol: list) -> dict:
-    result: dict[str, list[str]] = {}
-
-    for key in querycol:
-        result[key] = coltable[key]
-
-    return result
-
-
-def concat(table1: dict, table2: dict) -> dict:
-    result: dict[str, list[str]] = {}
-
-    for key in table1:
-        result[key] = table1[key]
-
-    for key in table2:
-        if key in result:
-            for val in table2[key]:
-                result[key].append(val)
-        else:
-            result[key] = table2[key]
-
-    return result
-
-
-def count(queryvals: list) -> dict:
-    counts: dict[str, int] = {}
-
-    for val in queryvals:
-        if val in counts:
-            counts[val] += 1
-        else:
-            counts[val] = 1
-
-    return counts
