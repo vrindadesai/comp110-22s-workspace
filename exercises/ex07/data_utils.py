@@ -56,6 +56,8 @@ def columnar(row_table: list) -> dict:
 
 
 def head(coltable: dict, n: int) -> dict:
+
+    #let head return entire table when n is greater then length
     result: dict[str, list[str]] = {}
 
     for key in coltable:
