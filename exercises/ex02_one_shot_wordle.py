@@ -12,15 +12,14 @@ while (len(guess) != len(secret_word)):
     guess = input(f"That was not { len(secret_word)} letters! Try again: ")
 i: int = 0
 j: int = 0
-found_flag: bool = False
+found_flag: bool = False # this is my boolean flag
 
-results_boxes: str = ""
+results_boxes: str = "" # this is where the boxes stored
 bb: str = ""
 while (i < len(secret_word)):  # secret word letter changes but not guess letter
     if guess[i] == secret_word[i]:
         results_boxes += GREEN_BOX
         found_flag = True
-        #bb += "g"
     else:  # letter was NOT found at it's own index
         while (j < len(secret_word)):  # so we can look anywhere else but it will be yellow
             if guess[i] == secret_word[j]:

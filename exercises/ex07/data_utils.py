@@ -42,7 +42,7 @@ def column_values(table: list, column: str) -> list:
 
 def columnar(row_table: list) -> dict:
     # note that this is dict[str, list[str]]
-    """Transfortm a row-oriented table to a column-oriented table."""
+    """Transform a row-oriented table to a column-oriented table."""
     result: dict[str, list[str]] = {}  # or dict()
 
     first_row: dict = row_table[0]
@@ -57,7 +57,7 @@ def columnar(row_table: list) -> dict:
 
 def head(coltable: dict, n: int) -> dict:
 
-    #let head return entire table when n is greater then length
+    # let head return entire table when n is greater then length
     result: dict[str, list[str]] = {}
 
     for key in coltable:

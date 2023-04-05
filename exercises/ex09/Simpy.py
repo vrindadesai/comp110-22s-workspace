@@ -1,3 +1,4 @@
+
 """Utility class for numerical operations."""
 
 from __future__ import annotations
